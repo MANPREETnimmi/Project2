@@ -3,144 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Website Review</title>
+    <title>University Achievements</title>
     <style>
         body {
-            font-family: 'Verdana, sans-serif';
-            background-color: #ff5252;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #222;
             color: #fff;
+            margin: 0;
+            padding-top: 60px; /* Added padding to separate content from the top */
         }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            position: relative;
-            top: 50%;
-            transform: translateY(10%);
-        }
-
-        h1 {
-            color: #ff5252;
-            margin-bottom: 20px;
-            font-size: 2em;
-        }
-
-        .marquee-container {
-            overflow: hidden;
-        }
-
-        .marquee {
-            font-family: 'Courier New, Courier, monospace';
-            color: #ff5252;
-            white-space: nowrap;
-            overflow: hidden;
-            box-sizing: border-box;
-            animation: marquee 10s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .input-group {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 1.2em;
-            color: #333;
-        }
-
-        .input-group textarea,
-        .input-group input {
-            width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            resize: none;
-            transition: border-color 0.3s;
-        }
-
-        .input-group textarea:focus,
-        .input-group input:focus {
-            border-color: #ff5252;
-        }
-
-        #submitBtn {
-            background-color: #ff5252;
+        header {
+            background-color: #4caf50;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            padding: 20px 0;
+            text-align: center;
         }
 
-        #submitBtn:hover {
-            background-color: #ff7575;
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+
+        .achievement {
+            margin-bottom: 20px;
+        }
+
+        .achievement img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .achievement img:hover {
+            transform: scale(1.2);
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #4caf50; /* Added border at the top of the footer */
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Website Review</h1>
-    
-    <div class="marquee-container">
-        <div class="marquee">
-            <p>This website is absolutely fantastic! The design, content, and user experience are top-notch. I highly recommend it!</p>
-        </div>
+<header>
+    <h1><a href="#">University Achievements</a></h1>
+</header>
+
+<section>
+    <h2>Academic Achievements</h2>
+    <div class="achievement">
+        <h3>Research Excellence Award</h3>
+        <p>Our university received the Research Excellence Award for outstanding contributions to various research fields. This prestigious award recognizes the dedication and innovation of our faculty and students.</p>
+        <img src="https://www.chitkara.edu.in/wp-content/uploads/2023/02/EA.jpg" alt="Research Excellence Award" onclick="showImage(this.src)" target="_blank">
     </div>
 
-    <div class="input-group">
-        <label for="reviewText">Write your review:</label>
-        <textarea id="reviewText" placeholder="Share your thoughts..."></textarea>
+    <div class="achievement">
+        <h3>Top Ranked Programs</h3>
+        <p>Several programs at our university are consistently ranked among the top in the country. Our commitment to academic excellence is reflected in the success of our students and the quality of our educational programs.</p>
+        <img src="https://www.chitkara.edu.in/wp-content/uploads/2021/11/QS-ranking.jpg" alt="Top Ranked Programs" onclick="showImage(this.src)" target="_blank">
+    </div>
+</section>
+
+<section>
+    <h2>Sports Achievements</h2>
+    <div class="achievement">
+        <h3>National Championship</h3>
+        <p>Our university's sports team won the national championship in multiple disciplines. The dedication and hard work of our athletes, coaches, and support staff have brought pride and recognition to our institution.</p>
+        <img src="https://www.chitkara.edu.in/wp-content/uploads/2023/05/Table-Tennis-Championship-banner.jpg" alt="National Championship" onclick="showImage(this.src)" target="_blank">
     </div>
 
-    <div class="input-group">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" placeholder="John Doe">
+    <div class="achievement">
+        <h3>Student Athlete Awards</h3>
+        <p>Several student-athletes from our university received awards for their outstanding achievements on and off the field. These individuals exemplify the values of sportsmanship, leadership, and academic excellence.</p>
+        <img src="https://www.chitkarauniversity.edu.in/wp-content/uploads/2022/11/Athletics-banner.jpg" alt="Student Athlete Awards" onclick="showImage(this.src)" target="_blank">
     </div>
+</section>
 
-    <div class="input-group">
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" placeholder="john@example.com">
-    </div>
-
-    <div class="input-group">
-        <label for="rating">Rating:</label>
-        <input type="number" id="rating" min="1" max="5" placeholder="5">
-    </div>
-
-    <button id="submitBtn" onclick="submitReview()">Submit Review</button>
-</div>
+<footer>
+    &copy; 2023 University Achievements Page
+</footer>
 
 <script>
-    function submitReview() {
-        var reviewText = document.getElementById('reviewText').value;
-        
-        if (reviewText) {
-            alert('Review submitted successfully!');
-            // You can add logic here to send the review to the server or perform other actions.
-        } else {
-            alert('Please write a review before submitting.');
-        }
+    function showImage(src) {
+        window.open(src, "_blank");
     }
 </script>
 
